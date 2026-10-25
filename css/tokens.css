@@ -1,0 +1,58 @@
+:root {
+  --bg: #ffffff;
+  --bg-subtle: #f6f7f9;
+  --text: #1f2328;
+  --text-muted: #656d76;
+  --border: #e3e6ea;
+  --accent: #2563eb;
+  --accent-soft: #e8f0fe;
+  --page-title: #dc2626;
+  --code-bg: #f3f4f6;
+  --code-text: #24292f;
+  --quote-border: #c8ccd2;
+  --shadow: 0 1px 2px rgb(0 0 0 / 6%), 0 4px 12px rgb(0 0 0 / 4%);
+
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, "Liberation Mono", monospace;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+  --radius: 0.5rem;
+  --content-width: 70ch;
+  --header-height: 3.5rem;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f1115;
+  --bg-subtle: #171a21;
+  --text: #e6e8eb;
+  --text-muted: #9aa3ad;
+  --border: #2a2f38;
+  --accent: #7aa7ff;
+  --accent-soft: #1b2a47;
+  --page-title: #f87171;
+  --code-bg: #1c2029;
+  --code-text: #e6e8eb;
+  --quote-border: #3a414d;
+  --shadow: 0 1px 2px rgb(0 0 0 / 40%);
+}
+
+/* JS가 꺼져 있을 때도 시스템 설정을 따른다 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #0f1115;
+    --bg-subtle: #171a21;
+    --text: #e6e8eb;
+    --text-muted: #9aa3ad;
+    --border: #2a2f38;
+    --accent: #7aa7ff;
+    --accent-soft: #1b2a47;
+    --code-bg: #1c2029;
+    --code-text: #e6e8eb;
+    --quote-border: #3a414d;
+  }
+}
